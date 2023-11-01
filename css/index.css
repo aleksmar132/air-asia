@@ -1,0 +1,506 @@
+body {
+    background-image: url(../assets/images/background.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1141px;
+}
+header {
+    display: flex;
+    margin-bottom: 120px;
+    margin-top: 20px;
+    align-items: center;
+}
+header div:nth-child(1) {
+    flex: 1;
+}
+header div:nth-child(2) {
+    flex: 5;
+}
+header div:nth-child(3) {
+    flex: 2;
+}
+header img {
+    display: block;
+    height: 36px;
+    width: 85px;
+}
+header nav li {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 47px;
+    padding-left: 8px;
+}
+header nav a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+header nav a:hover {
+    color: #DA0100;
+}
+header address {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+header address a {
+    margin-bottom: -5px;
+    font-weight: 400;
+    font-size: 26px;
+    color: #fff;
+    font-style: normal;
+    margin-top: 10px;
+}
+header .main {
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+header address .main a {
+    font-weight: 400;
+    font-size: 13px;
+    color:  #98A4A8;
+    font-style: normal;
+    text-decoration: underline;
+    margin: 0;
+}
+header .main:hover .dropdown {
+    left: 125px;
+    opacity: 1;
+}
+header .main .dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: #EDEDED;
+    width: 160px;
+    height: 80px;
+    top: 30%;
+    margin-top: 20px; 
+    left: -9999px;
+    opacity: 0;
+    transition: opacity .4s;
+    border-radius: 4px;
+}
+header .main .dropdown::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 33px;
+    width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 15px solid #EDEDED;
+}
+header .main .dropdown::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: -29px; 
+    height: 30px; 
+}
+header .main .dropdown li {
+    display: flex;
+    font-weight: 600;
+    font-size: 13px;
+    color:  #1E1F20;
+    font-style: normal
+}
+header .main .dropdown span {
+    font-weight: 600;
+}
+.content {
+    margin-bottom: 265px;
+}
+.content .author-tours h1 {
+    padding-bottom: 2px;
+    max-width: 50%;
+    color: #fff;
+}
+.content .author-tours p {
+    font-weight: 400;
+    font-size: 18x;
+    color: #fff;
+    padding-top: 28px;
+    padding-bottom: 45px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+.content .author-tours a {
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    background: #F5170E;
+    border-radius: 35px;
+    padding: 18px 40px;
+    text-transform: uppercase;
+    border: none;
+}
+.content .author-tours a:hover {
+    color: #fffE;
+    background: #DA0100;
+    border: none;
+}
+.hot-tours .title {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 51px;
+}
+.hot-tours h2 {
+    color: #fff;
+    padding-right: 12px;
+}
+.hot-tours ul {
+    display: flex;
+    justify-content: space-between;
+}
+.hot-tours li {
+    display: inline-block;
+    margin-right: 30px;
+}
+.hot-tours li:last-child {
+    margin-right: 0;
+}
+.hot-tours .header {
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+}
+.hot-tours .header img {
+    min-height: 144px;
+    border-radius: 5px 5px 0 0;
+}
+.hot-tours .card {
+    padding: 30px 16px 44px 20px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    min-height: 250px;
+}
+.hot-tours .card h3 {
+    color: #000;
+    margin-bottom: 20px;
+}
+.hot-tours .card .icons {
+    display: flex;
+    align-items: center;
+}
+.hot-tours .card .night {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    color: #666;
+}
+.hot-tours .card .breakfast {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    color: #666;
+}
+.hot-tours .card img {
+    margin-right: 10px;
+    margin-left: 4px;
+}
+.hot-tours .card p {
+    margin-right: 28px;
+}
+.hot-tours .card .text {
+    margin-top: 27px;
+    margin-bottom: 44px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #303030; 
+}
+.hot-tours .card a {
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    background: #F5170E;
+    border-radius: 35px;
+    padding: 18px 30px;
+    text-transform: uppercase;
+    border: none;
+}
+.hot-tours .card a:hover {
+    color: #F5170E;
+    background: #fff;
+    border: 1px solid #F5170E;
+}
+.news h2 {
+    padding-top: 123px;
+    padding-bottom: 51px;
+    color: #fff;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news li {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 25px;
+}
+.news li:last-child {
+    margin-right: 0;
+}
+.news li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.news .text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 44px 2px 30px;
+    word-wrap: break-word;
+}
+.news .text p {
+    margin: 0;
+    padding-bottom: 13px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+} 
+.news .text h3 {
+    color: #fff;
+    padding-bottom: 4px;
+    letter-spacing: 0.8px;
+}
+.news .article-airplane {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    padding-bottom: 48px; 
+}
+.news .article-surf {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    padding-bottom: 25px; 
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 150px;
+}
+.pagination p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    margin-right: 28px;
+}
+.pagination li {
+    display: inline-block;
+}
+.pagination li a {
+    text-align: center;
+    padding: 5px 13px 6px 13px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+}
+.pagination li a:hover {
+    background: #fff;
+    color: #F5170E;
+    border-radius: 50%;
+}
+.about::before {
+    content: "";
+    display: inline-block;
+    min-width: 490px; 
+    height: 505px;
+    background: url(../assets/images/gates.png);
+}
+.about {
+    display: flex;
+}
+.about .interactive {
+    vertical-align: top;
+    background: url(../assets/images/mountains.png);
+    background-repeat: no-repeat;
+    height: 455px;
+    width: 1300px;  
+    margin-bottom: 55px;
+    padding: 0 210px 0 81px;
+    margin-top: 97px;
+    margin-left: -140px;
+}
+.about h2 {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    color: #000;
+}
+.about p {
+    margin-bottom: 61px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+    line-height: 27px;
+}
+.about a {
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    background: #F5170E;
+    border-radius: 35px;
+    padding: 18px 40px;
+    text-transform: uppercase;
+    border: none;
+}
+.about a:hover {
+    color: #F5170E;
+    background: #fff;
+    border: 1px solid #F5170E;
+}
+.footer-line::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    opacity: .1;
+}
+.footer-edge {
+    background: #001821;
+}
+footer {
+    display: flex;
+    align-items: center;
+    padding-top: 46px;
+    padding-bottom: 48px;
+}
+footer div:nth-child(2) {
+    flex: 2;
+}
+footer div:nth-child(3) {
+    flex: 3;
+}
+footer div:nth-child(3) {
+    flex: 1;
+}
+footer img {
+    height: 36px;
+    width: 85px;
+}
+footer .menu-sprite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .menu li {
+    display: inline-block;
+    margin-right: -30px;
+    margin-left: 80px;
+}
+footer .menu li a {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+footer .menu li a:hover {
+    color: #DA0100;
+}
+footer nav li {
+    display: inline-block;
+}
+footer .icon {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+footer .icon:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    transition: .3s;
+    margin-right: 35px;
+}
+footer .icon:hover:after {
+    opacity: 0;
+}
+footer .telegram:after {
+    background: url('../assets/images/sprites.png')  -122px -66px;
+}
+footer .vk:after {
+    background: url('../assets/images/sprites.png')  -10px -122px;
+}
+footer .facebook:after {
+    background: url('../assets/images/sprites.png')  -10px -10px;
+}
+footer .instagram:after {
+    background: url('../assets/images/sprites.png')  -10px -66px;
+}
+footer .icon:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s;
+}
+footer .icon:hover:before {
+    opacity: 1;
+}
+footer .telegram:before {
+    background: url('../assets/images/sprites.png')  -122px -10px;
+}
+footer .vk:before {
+    background: url('../assets/images/sprites.png')  -66px -122px;
+}
+footer .facebook:before {
+    background: url('../assets/images/sprites.png')  -66px -10px;
+}
+footer .instagram:before {
+    background: url('../assets/images/sprites.png')  -66px -66px;
+}
+footer .link-footer {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+footer address div {
+    font-weight: 400;
+    font-size: 11px;
+    color: #9a9a9a;
+    font-style: normal;
+    text-align: right;
+}
+footer address a {
+    font-weight: 400;
+    font-size: 26px;
+    color: #fff;
+    font-style: normal;
+}
